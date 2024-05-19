@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.TELAS
 {
-    partial class Resumo
+    partial class Resumo___Galeria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resumo___Galeria));
             SuspendLayout();
             // 
-            // Resumo
+            // Resumo___Galeria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(464, 815);
-            Name = "Resumo";
-            Text = "Resumo";
+            Name = "Resumo___Galeria";
+            Text = "Resumo___Galeria";
             ResumeLayout(false);
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.TELAS
 {
-    partial class Resumo___Astronautas
+    partial class Resumo___Curiosidades
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resumo___Curiosidades));
             SuspendLayout();
             // 
-            // Resumo___Astronautas
+            // Resumo___Curiosidades
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(464, 815);
-            Name = "Resumo___Astronautas";
-            Text = "Resumo___Astronautas";
+            Name = "Resumo___Curiosidades";
+            ShowInTaskbar = false;
+            Text = "Resumo___Curiosidades";
             ResumeLayout(false);
         }
 

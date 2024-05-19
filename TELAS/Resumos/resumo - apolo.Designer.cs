@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1.TELAS
+﻿namespace WinFormsApp1.TELAS.Resumo
 {
-    partial class Resumo___Curiosidades
+    partial class resumo___apolo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(resumo___apolo));
             SuspendLayout();
             // 
-            // Resumo___Curiosidades
+            // resumo___apolo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(464, 815);
-            Name = "Resumo___Curiosidades";
-            ShowInTaskbar = false;
-            Text = "Resumo___Curiosidades";
+            DoubleBuffered = true;
+            Name = "resumo___apolo";
+            Text = "resumo___apolo";
             ResumeLayout(false);
         }
 

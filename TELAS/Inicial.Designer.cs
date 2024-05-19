@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form1
+    partial class Inicial
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,21 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicial));
+            BtnClique = new Button();
             SuspendLayout();
             // 
-            // Form1
+            // BtnClique
+            // 
+            BtnClique.Location = new Point(2, 0);
+            BtnClique.Name = "BtnClique";
+            BtnClique.Size = new Size(464, 815);
+            BtnClique.TabIndex = 0;
+            BtnClique.UseVisualStyleBackColor = true;
+            BtnClique.Click += button1_Click;
+            // 
+            // Inicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(464, 815);
-            Name = "Form1";
+            Controls.Add(BtnClique);
+            Name = "Inicial";
             Text = "TELA AFK";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button BtnClique;
+        
     }
 }
