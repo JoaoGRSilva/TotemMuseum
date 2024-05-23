@@ -34,6 +34,7 @@
             BtnMichael = new Button();
             BtnBuzz = new Button();
             BtnNeil = new Button();
+            BtnFeedBack = new Button();
             SuspendLayout();
             // 
             // BtnResumo
@@ -96,13 +97,24 @@
             BtnNeil.UseVisualStyleBackColor = true;
             BtnNeil.Click += BtnNeil_Click;
             // 
+            // BtnFeedBack
+            // 
+            BtnFeedBack.Location = new Point(342, 12);
+            BtnFeedBack.Name = "BtnFeedBack";
+            BtnFeedBack.Size = new Size(75, 62);
+            BtnFeedBack.TabIndex = 7;
+            BtnFeedBack.TextAlign = ContentAlignment.BottomCenter;
+            BtnFeedBack.UseVisualStyleBackColor = true;
+            BtnFeedBack.Click += BtnFeedBack_Click;
+            // 
             // Resumo___Astronautas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.RAstronautas;
+            BackgroundImage = Properties.Resources.RAstronauta;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 721);
+            Controls.Add(BtnFeedBack);
             Controls.Add(BtnNeil);
             Controls.Add(BtnBuzz);
             Controls.Add(BtnMichael);
@@ -123,5 +135,6 @@
         private Button BtnMichael;
         private Button BtnBuzz;
         private Button BtnNeil;
+        private Button BtnFeedBack;
     }
 }

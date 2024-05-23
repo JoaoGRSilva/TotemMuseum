@@ -32,6 +32,7 @@
             BtnGaleria = new Button();
             BtnAstronautas = new Button();
             BtnResumo = new Button();
+            BtnFeedBack = new Button();
             SuspendLayout();
             // 
             // BtnCuriosidades
@@ -39,7 +40,7 @@
             BtnCuriosidades.Cursor = Cursors.Hand;
             BtnCuriosidades.Location = new Point(266, 30);
             BtnCuriosidades.Name = "BtnCuriosidades";
-            BtnCuriosidades.Size = new Size(80, 23);
+            BtnCuriosidades.Size = new Size(70, 23);
             BtnCuriosidades.TabIndex = 5;
             BtnCuriosidades.UseVisualStyleBackColor = true;
             BtnCuriosidades.Click += BtnCuriosidades_Click_1;
@@ -77,12 +78,23 @@
             BtnResumo.UseVisualStyleBackColor = true;
             BtnResumo.Click += BtnResumo_Click_1;
             // 
+            // BtnFeedBack
+            // 
+            BtnFeedBack.Location = new Point(342, 12);
+            BtnFeedBack.Name = "BtnFeedBack";
+            BtnFeedBack.Size = new Size(75, 62);
+            BtnFeedBack.TabIndex = 7;
+            BtnFeedBack.TextAlign = ContentAlignment.BottomCenter;
+            BtnFeedBack.UseVisualStyleBackColor = true;
+            BtnFeedBack.Click += BtnFeedBack_Click;
+            // 
             // resumo_neil
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.RNeil;
             ClientSize = new Size(534, 721);
+            Controls.Add(BtnFeedBack);
             Controls.Add(BtnResumo);
             Controls.Add(BtnCuriosidades);
             Controls.Add(BtnGaleria);
@@ -98,5 +110,6 @@
         private Button BtnGaleria;
         private Button BtnAstronautas;
         private Button BtnResumo;
+        private Button BtnFeedBack;
     }
 }

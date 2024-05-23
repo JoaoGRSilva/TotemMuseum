@@ -7,7 +7,7 @@ namespace WinFormsApp1
         public Inicial()
         {
             InitializeComponent();
-
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             BtnClique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             BtnClique.FlatAppearance.BorderSize = 0;
@@ -27,5 +27,6 @@ namespace WinFormsApp1
             // Exibe o FormResumo1
             formResumo1.Show();
         }
+
     }
 }

@@ -34,6 +34,7 @@
             BtnNeil = new Button();
             BtnApollo = new Button();
             BtnNasa = new Button();
+            BtnFeedBack = new Button();
             SuspendLayout();
             // 
             // BtnAstronautas
@@ -41,9 +42,9 @@
             BtnAstronautas.BackColor = Color.Transparent;
             BtnAstronautas.Cursor = Cursors.Hand;
             BtnAstronautas.ForeColor = Color.Transparent;
-            BtnAstronautas.Location = new Point(138, 30);
+            BtnAstronautas.Location = new Point(138, 12);
             BtnAstronautas.Name = "BtnAstronautas";
-            BtnAstronautas.Size = new Size(68, 23);
+            BtnAstronautas.Size = new Size(68, 62);
             BtnAstronautas.TabIndex = 0;
             BtnAstronautas.UseVisualStyleBackColor = false;
             BtnAstronautas.Click += BtnAstronautas_Click;
@@ -53,9 +54,9 @@
             BtnGaleria.BackColor = Color.Transparent;
             BtnGaleria.Cursor = Cursors.Hand;
             BtnGaleria.ForeColor = Color.Transparent;
-            BtnGaleria.Location = new Point(212, 30);
+            BtnGaleria.Location = new Point(212, 12);
             BtnGaleria.Name = "BtnGaleria";
-            BtnGaleria.Size = new Size(52, 23);
+            BtnGaleria.Size = new Size(52, 62);
             BtnGaleria.TabIndex = 1;
             BtnGaleria.UseVisualStyleBackColor = false;
             BtnGaleria.Click += BtnGaleria_Click;
@@ -63,9 +64,9 @@
             // BtnCuriosidades
             // 
             BtnCuriosidades.Cursor = Cursors.Hand;
-            BtnCuriosidades.Location = new Point(266, 30);
+            BtnCuriosidades.Location = new Point(266, 12);
             BtnCuriosidades.Name = "BtnCuriosidades";
-            BtnCuriosidades.Size = new Size(80, 23);
+            BtnCuriosidades.Size = new Size(74, 62);
             BtnCuriosidades.TabIndex = 2;
             BtnCuriosidades.UseVisualStyleBackColor = true;
             BtnCuriosidades.Click += BtnCuriosidades_Click;
@@ -100,13 +101,24 @@
             BtnNasa.UseVisualStyleBackColor = true;
             BtnNasa.Click += BtnNasa_Click;
             // 
+            // BtnFeedBack
+            // 
+            BtnFeedBack.Location = new Point(340, 12);
+            BtnFeedBack.Name = "BtnFeedBack";
+            BtnFeedBack.Size = new Size(75, 62);
+            BtnFeedBack.TabIndex = 6;
+            BtnFeedBack.TextAlign = ContentAlignment.BottomCenter;
+            BtnFeedBack.UseVisualStyleBackColor = true;
+            BtnFeedBack.Click += BtnFeedBack_Click;
+            // 
             // R1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Imagem1;
+            BackgroundImage = Properties.Resources.R1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 721);
+            Controls.Add(BtnFeedBack);
             Controls.Add(BtnNasa);
             Controls.Add(BtnApollo);
             Controls.Add(BtnNeil);
@@ -127,5 +139,6 @@
         private Button BtnNeil;
         private Button BtnApollo;
         private Button BtnNasa;
+        private Button BtnFeedBack;
     }
 }

@@ -133,19 +133,9 @@ namespace WinFormsApp1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Imagem1 {
+        internal static System.Drawing.Bitmap R1 {
             get {
-                object obj = ResourceManager.GetObject("Imagem1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap RAdmin {
-            get {
-                object obj = ResourceManager.GetObject("RAdmin", resourceCulture);
+                object obj = ResourceManager.GetObject("R1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +153,9 @@ namespace WinFormsApp1.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RAstronautas {
+        internal static System.Drawing.Bitmap RAstronauta {
             get {
-                object obj = ResourceManager.GetObject("RAstronautas", resourceCulture);
+                object obj = ResourceManager.GetObject("RAstronauta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

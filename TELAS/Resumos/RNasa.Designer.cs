@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Resumo___Nasa));
             BtnResumo = new Button();
             BtnCuriosidades = new Button();
             BtnGaleria = new Button();
             BtnAstronautas = new Button();
+            BtnFeedBack = new Button();
             SuspendLayout();
             // 
             // BtnResumo
@@ -45,10 +47,11 @@
             // 
             // BtnCuriosidades
             // 
+            BtnCuriosidades.BackgroundImageLayout = ImageLayout.Center;
             BtnCuriosidades.Cursor = Cursors.Hand;
             BtnCuriosidades.Location = new Point(266, 32);
             BtnCuriosidades.Name = "BtnCuriosidades";
-            BtnCuriosidades.Size = new Size(80, 23);
+            BtnCuriosidades.Size = new Size(76, 23);
             BtnCuriosidades.TabIndex = 9;
             BtnCuriosidades.UseVisualStyleBackColor = true;
             BtnCuriosidades.Click += BtnCuriosidades_Click;
@@ -77,18 +80,28 @@
             BtnAstronautas.UseVisualStyleBackColor = false;
             BtnAstronautas.Click += BtnAstronautas_Click_1;
             // 
+            // BtnFeedBack
+            // 
+            BtnFeedBack.Location = new Point(345, 12);
+            BtnFeedBack.Name = "BtnFeedBack";
+            BtnFeedBack.Size = new Size(75, 62);
+            BtnFeedBack.TabIndex = 11;
+            BtnFeedBack.TextAlign = ContentAlignment.BottomCenter;
+            BtnFeedBack.UseVisualStyleBackColor = true;
+            BtnFeedBack.Click += BtnFeedBack_Click;
+            // 
             // Resumo___Nasa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.RNasa;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(534, 721);
+            Controls.Add(BtnFeedBack);
             Controls.Add(BtnResumo);
             Controls.Add(BtnCuriosidades);
             Controls.Add(BtnGaleria);
             Controls.Add(BtnAstronautas);
             Name = "Resumo___Nasa";
-            Text = "Museu Totem";
             ResumeLayout(false);
         }
 
@@ -98,5 +111,6 @@
         private Button BtnCuriosidades;
         private Button BtnGaleria;
         private Button BtnAstronautas;
+        private Button BtnFeedBack;
     }
 }

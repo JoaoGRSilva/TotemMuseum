@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.TELAS.Feedback;
 
 namespace WinFormsApp1.TELAS.Resumo
 {
@@ -40,6 +41,13 @@ namespace WinFormsApp1.TELAS.Resumo
             BtnResumo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             BtnResumo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             BtnResumo.BackColor = Color.Transparent;
+
+            BtnFeedBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnFeedBack.FlatAppearance.BorderSize = 0;
+            BtnFeedBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BtnFeedBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            BtnFeedBack.BackColor = Color.Transparent;
+
         }
 
 
@@ -69,6 +77,13 @@ namespace WinFormsApp1.TELAS.Resumo
             this.Hide();
             Resumo___Curiosidades formCuriosidades = new Resumo___Curiosidades();
             formCuriosidades.Show();
+        }
+
+        private void BtnFeedBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Feed_1 formFeed = new Feed_1();
+            formFeed.Show();
         }
     }
 }

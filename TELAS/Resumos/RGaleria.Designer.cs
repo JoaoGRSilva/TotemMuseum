@@ -31,6 +31,7 @@
             BtnResumo = new Button();
             BtnAstronautas = new Button();
             BtnCuriosidades = new Button();
+            BtnFeedBack = new Button();
             SuspendLayout();
             // 
             // BtnResumo
@@ -58,10 +59,20 @@
             BtnCuriosidades.Cursor = Cursors.Hand;
             BtnCuriosidades.Location = new Point(260, 22);
             BtnCuriosidades.Name = "BtnCuriosidades";
-            BtnCuriosidades.Size = new Size(83, 40);
+            BtnCuriosidades.Size = new Size(75, 40);
             BtnCuriosidades.TabIndex = 3;
             BtnCuriosidades.UseVisualStyleBackColor = true;
             BtnCuriosidades.Click += BtnCuriosidades_Click;
+            // 
+            // BtnFeedBack
+            // 
+            BtnFeedBack.Location = new Point(341, 12);
+            BtnFeedBack.Name = "BtnFeedBack";
+            BtnFeedBack.Size = new Size(75, 62);
+            BtnFeedBack.TabIndex = 7;
+            BtnFeedBack.TextAlign = ContentAlignment.BottomCenter;
+            BtnFeedBack.UseVisualStyleBackColor = true;
+            BtnFeedBack.Click += BtnFeedBack_Click;
             // 
             // Resumo___Galeria
             // 
@@ -69,6 +80,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.RGaleria;
             ClientSize = new Size(534, 721);
+            Controls.Add(BtnFeedBack);
             Controls.Add(BtnCuriosidades);
             Controls.Add(BtnAstronautas);
             Controls.Add(BtnResumo);
@@ -82,5 +94,6 @@
         private Button BtnResumo;
         private Button BtnAstronautas;
         private Button BtnCuriosidades;
+        private Button BtnFeedBack;
     }
 }
