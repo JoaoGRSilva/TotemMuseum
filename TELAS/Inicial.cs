@@ -7,6 +7,8 @@ namespace WinFormsApp1
         public Inicial()
         {
             InitializeComponent();
+
+
             BtnClique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             BtnClique.FlatAppearance.BorderSize = 0;
             BtnClique.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -20,7 +22,7 @@ namespace WinFormsApp1
             this.Hide();
 
             // Cria uma instância
-            Resumo1 formResumo1 = new Resumo1();
+            R1 formResumo1 = new R1();
 
             // Exibe o FormResumo1
             formResumo1.Show();
