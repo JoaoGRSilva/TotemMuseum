@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.TELAS.Feedback
 {
-    partial class Feed_2
+    partial class F2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Feed_2));
+            btnOpenKeyboard = new Button();
+            btnProx = new Button();
             SuspendLayout();
             // 
-            // Feed_2
+            // btnOpenKeyboard
+            // 
+            btnOpenKeyboard.Location = new Point(125, 239);
+            btnOpenKeyboard.Name = "btnOpenKeyboard";
+            btnOpenKeyboard.Size = new Size(174, 47);
+            btnOpenKeyboard.TabIndex = 0;
+            btnOpenKeyboard.UseVisualStyleBackColor = true;
+            btnOpenKeyboard.Click += btnOpenKeyboard_Click;
+            // 
+            // btnProx
+            // 
+            btnProx.Location = new Point(296, 537);
+            btnProx.Name = "btnProx";
+            btnProx.Size = new Size(117, 51);
+            btnProx.TabIndex = 1;
+            btnProx.UseVisualStyleBackColor = true;
+            btnProx.Click += button1_Click;
+            // 
+            // F2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(584, 985);
-            Name = "Feed_2";
+            BackgroundImage = Properties.Resources.F2;
+            ClientSize = new Size(534, 721);
+            Controls.Add(btnProx);
+            Controls.Add(btnOpenKeyboard);
+            Name = "F2";
             Text = "Museu Totem";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnOpenKeyboard;
+        private Button btnProx;
     }
 }

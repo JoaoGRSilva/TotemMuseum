@@ -36,8 +36,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(584, 985);
+            ClientSize = new Size(534, 721);
             Name = "Feed_6";
             Text = "Museu Totem";
             ResumeLayout(false);

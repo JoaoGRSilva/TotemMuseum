@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.TELAS.Feedback
 {
-    partial class Feed_1
+    partial class F1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Feed_1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F1));
+            BtnNao = new Button();
+            BtnSim = new Button();
             SuspendLayout();
             // 
-            // Feed_1
+            // BtnNao
+            // 
+            BtnNao.Location = new Point(290, 273);
+            BtnNao.Name = "BtnNao";
+            BtnNao.Size = new Size(117, 64);
+            BtnNao.TabIndex = 0;
+            BtnNao.UseVisualStyleBackColor = true;
+            BtnNao.Click += BtnNao_Click;
+            // 
+            // BtnSim
+            // 
+            BtnSim.Location = new Point(100, 273);
+            BtnSim.Name = "BtnSim";
+            BtnSim.Size = new Size(142, 64);
+            BtnSim.TabIndex = 1;
+            BtnSim.UseVisualStyleBackColor = true;
+            BtnSim.Click += BtnSim_Click;
+            // 
+            // F1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(584, 985);
-            Name = "Feed_1";
+            ClientSize = new Size(534, 721);
+            Controls.Add(BtnSim);
+            Controls.Add(BtnNao);
+            Name = "F1";
             Text = "Museu Totem";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button BtnNao;
+        private Button BtnSim;
     }
 }

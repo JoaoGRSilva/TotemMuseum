@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1.TELAS.Feedback
 {
-    public partial class feed_3_continuacao : Form
+    public partial class F3C : Form
     {
-        public feed_3_continuacao()
+        public F3C()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

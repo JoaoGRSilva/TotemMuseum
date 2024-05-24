@@ -82,7 +82,7 @@ namespace WinFormsApp1.TELAS.Resumo
         private void BtnFeedBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Feed_1 formFeed = new Feed_1();
+            F1 formFeed = new F1();
             formFeed.Show();
         }
     }

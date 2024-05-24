@@ -42,9 +42,9 @@
             BtnAstronautas.BackColor = Color.Transparent;
             BtnAstronautas.Cursor = Cursors.Hand;
             BtnAstronautas.ForeColor = Color.Transparent;
-            BtnAstronautas.Location = new Point(138, 12);
+            BtnAstronautas.Location = new Point(130, 12);
             BtnAstronautas.Name = "BtnAstronautas";
-            BtnAstronautas.Size = new Size(68, 62);
+            BtnAstronautas.Size = new Size(78, 62);
             BtnAstronautas.TabIndex = 0;
             BtnAstronautas.UseVisualStyleBackColor = false;
             BtnAstronautas.Click += BtnAstronautas_Click;
@@ -54,9 +54,9 @@
             BtnGaleria.BackColor = Color.Transparent;
             BtnGaleria.Cursor = Cursors.Hand;
             BtnGaleria.ForeColor = Color.Transparent;
-            BtnGaleria.Location = new Point(212, 12);
+            BtnGaleria.Location = new Point(208, 12);
             BtnGaleria.Name = "BtnGaleria";
-            BtnGaleria.Size = new Size(52, 62);
+            BtnGaleria.Size = new Size(58, 62);
             BtnGaleria.TabIndex = 1;
             BtnGaleria.UseVisualStyleBackColor = false;
             BtnGaleria.Click += BtnGaleria_Click;
@@ -66,7 +66,7 @@
             BtnCuriosidades.Cursor = Cursors.Hand;
             BtnCuriosidades.Location = new Point(266, 12);
             BtnCuriosidades.Name = "BtnCuriosidades";
-            BtnCuriosidades.Size = new Size(74, 62);
+            BtnCuriosidades.Size = new Size(69, 62);
             BtnCuriosidades.TabIndex = 2;
             BtnCuriosidades.UseVisualStyleBackColor = true;
             BtnCuriosidades.Click += BtnCuriosidades_Click;
@@ -74,9 +74,9 @@
             // BtnNeil
             // 
             BtnNeil.Cursor = Cursors.Hand;
-            BtnNeil.Location = new Point(105, 287);
+            BtnNeil.Location = new Point(101, 278);
             BtnNeil.Name = "BtnNeil";
-            BtnNeil.Size = new Size(90, 37);
+            BtnNeil.Size = new Size(110, 48);
             BtnNeil.TabIndex = 3;
             BtnNeil.UseVisualStyleBackColor = true;
             BtnNeil.Click += BtnNeil_Click;
@@ -84,9 +84,9 @@
             // BtnApollo
             // 
             BtnApollo.Cursor = Cursors.Hand;
-            BtnApollo.Location = new Point(242, 431);
+            BtnApollo.Location = new Point(208, 411);
             BtnApollo.Name = "BtnApollo";
-            BtnApollo.Size = new Size(75, 43);
+            BtnApollo.Size = new Size(139, 79);
             BtnApollo.TabIndex = 4;
             BtnApollo.UseVisualStyleBackColor = true;
             BtnApollo.Click += BtnApollo_Click;
@@ -94,16 +94,16 @@
             // BtnNasa
             // 
             BtnNasa.Cursor = Cursors.Hand;
-            BtnNasa.Location = new Point(115, 617);
+            BtnNasa.Location = new Point(101, 580);
             BtnNasa.Name = "BtnNasa";
-            BtnNasa.Size = new Size(80, 36);
+            BtnNasa.Size = new Size(110, 89);
             BtnNasa.TabIndex = 5;
             BtnNasa.UseVisualStyleBackColor = true;
             BtnNasa.Click += BtnNasa_Click;
             // 
             // BtnFeedBack
             // 
-            BtnFeedBack.Location = new Point(340, 12);
+            BtnFeedBack.Location = new Point(342, 12);
             BtnFeedBack.Name = "BtnFeedBack";
             BtnFeedBack.Size = new Size(75, 62);
             BtnFeedBack.TabIndex = 6;

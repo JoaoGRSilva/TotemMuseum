@@ -18,13 +18,9 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Oculta o FormInicial
+
             this.Hide();
-
-            // Cria uma instância
             R1 formResumo1 = new R1();
-
-            // Exibe o FormResumo1
             formResumo1.Show();
         }
 

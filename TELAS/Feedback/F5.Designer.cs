@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.TELAS.Feedback
 {
-    partial class Feed_5
+    partial class F5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Feed_5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F5));
+            button1 = new Button();
             SuspendLayout();
             // 
-            // Feed_5
+            // button1
+            // 
+            button1.Location = new Point(358, 566);
+            button1.Name = "button1";
+            button1.Size = new Size(101, 47);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // F5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(584, 985);
-            Name = "Feed_5";
+            ClientSize = new Size(534, 721);
+            Controls.Add(button1);
+            Name = "F5";
             Text = "Museu Totem";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
     }
 }

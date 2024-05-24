@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1.TELAS.Feedback
 {
-    partial class feed_3_continuacao
+    partial class F3C
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(feed_3_continuacao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F3C));
+            button1 = new Button();
             SuspendLayout();
             // 
-            // feed_3_continuacao
+            // button1
+            // 
+            button1.Location = new Point(300, 535);
+            button1.Name = "button1";
+            button1.Size = new Size(110, 40);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // F3C
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(584, 985);
-            Name = "feed_3_continuacao";
+            ClientSize = new Size(534, 721);
+            Controls.Add(button1);
+            Name = "F3C";
             Text = "Museu Totem";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
     }
 }

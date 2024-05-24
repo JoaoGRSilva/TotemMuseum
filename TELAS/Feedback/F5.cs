@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1.TELAS.Feedback
 {
-    public partial class Feed_5 : Form
+    public partial class F5 : Form
     {
-        public Feed_5()
+        public F5()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
