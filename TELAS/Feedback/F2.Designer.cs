@@ -2,15 +2,10 @@
 {
     partial class F2
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Button btnProx;
+        private TextBox textBox1;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,29 +15,19 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            btnOpenKeyboard = new Button();
             btnProx = new Button();
+            textBox1 = new TextBox();
+            pictureBox1 = new PictureBox();
+            comboBox1 = new ComboBox();
+            btnVoltar = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // btnOpenKeyboard
-            // 
-            btnOpenKeyboard.Location = new Point(125, 239);
-            btnOpenKeyboard.Name = "btnOpenKeyboard";
-            btnOpenKeyboard.Size = new Size(174, 47);
-            btnOpenKeyboard.TabIndex = 0;
-            btnOpenKeyboard.UseVisualStyleBackColor = true;
-            btnOpenKeyboard.Click += btnOpenKeyboard_Click;
             // 
             // btnProx
             // 
+            btnProx.Cursor = Cursors.Hand;
             btnProx.Location = new Point(296, 537);
             btnProx.Name = "btnProx";
             btnProx.Size = new Size(117, 51);
@@ -50,22 +35,61 @@
             btnProx.UseVisualStyleBackColor = true;
             btnProx.Click += button1_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(130, 242);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(166, 43);
+            textBox1.TabIndex = 2;
+            textBox1.MouseClick += opemKeyboard;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(113, 409);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(239, 89);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 20.25F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(130, 344);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(166, 45);
+            comboBox1.TabIndex = 6;
+            // 
+            // btnVoltar
+            // 
+            btnVoltar.Location = new Point(113, 540);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(123, 48);
+            btnVoltar.TabIndex = 7;
+            btnVoltar.UseVisualStyleBackColor = true;
+            btnVoltar.Click += btnVoltar_Click;
+            // 
             // F2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.F2;
             ClientSize = new Size(534, 721);
+            Controls.Add(btnVoltar);
+            Controls.Add(comboBox1);
+            Controls.Add(pictureBox1);
+            Controls.Add(textBox1);
             Controls.Add(btnProx);
-            Controls.Add(btnOpenKeyboard);
             Name = "F2";
             Text = "Museu Totem";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
-        #endregion
-
-        private Button btnOpenKeyboard;
-        private Button btnProx;
+        private PictureBox pictureBox1;
+        private ComboBox comboBox1;
+        private Button btnVoltar;
     }
 }

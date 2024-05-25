@@ -2,9 +2,6 @@ namespace WinFormsApp1;
 
 internal static class Program
 {
-    /// <summary>
-    ///  The main entry point for the application.
-    /// </summary>
     [STAThread]
     static void Main()
     {
@@ -12,5 +9,6 @@ internal static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
         Application.Run(new Inicial());
+
     }
 }

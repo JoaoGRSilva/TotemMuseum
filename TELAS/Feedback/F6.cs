@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace WinFormsApp1.TELAS.Feedback
+﻿namespace WinFormsApp1.TELAS.Feedback
 {
     public partial class Feed_6 : Form
     {
+        public static int respondentes { get; set; }
+
         public Feed_6()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            respondentes++;
+            this.Close();
+            Inicial r1 = new Inicial();
+            r1.Show();
         }
     }
 }

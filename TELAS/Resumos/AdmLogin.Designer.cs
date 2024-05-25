@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1.TELAS.Feedback
+﻿namespace WinFormsApp1.TELAS.Resumos
 {
-    partial class F5
+    partial class AdmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F5));
             button1 = new Button();
-            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(358, 566);
+            button1.Location = new Point(385, 258);
             button1.Name = "button1";
-            button1.Size = new Size(101, 47);
+            button1.Size = new Size(107, 44);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 15.75F);
-            textBox1.Location = new Point(115, 339);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(306, 35);
-            textBox1.TabIndex = 1;
-            // 
-            // F5
+            // AdmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.admlogin;
             ClientSize = new Size(534, 721);
-            Controls.Add(textBox1);
             Controls.Add(button1);
-            Name = "F5";
-            Text = "Museu Totem";
+            Name = "AdmLogin";
+            Text = "AdmLogin";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
     }
 }

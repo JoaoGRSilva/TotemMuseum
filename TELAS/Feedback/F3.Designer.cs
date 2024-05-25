@@ -40,6 +40,7 @@
             // 
             // BtnSim
             // 
+            BtnSim.Cursor = Cursors.Hand;
             BtnSim.Location = new Point(126, 237);
             BtnSim.Name = "BtnSim";
             BtnSim.Size = new Size(100, 45);
@@ -50,6 +51,7 @@
             // 
             // BtnNao
             // 
+            BtnNao.Cursor = Cursors.Hand;
             BtnNao.Location = new Point(232, 237);
             BtnNao.Name = "BtnNao";
             BtnNao.Size = new Size(100, 45);
@@ -60,6 +62,7 @@
             // 
             // button3
             // 
+            button3.Cursor = Cursors.Hand;
             button3.Location = new Point(126, 365);
             button3.Name = "button3";
             button3.Size = new Size(100, 45);
@@ -70,6 +73,7 @@
             // 
             // button4
             // 
+            button4.Cursor = Cursors.Hand;
             button4.Location = new Point(232, 365);
             button4.Name = "button4";
             button4.Size = new Size(100, 45);
@@ -80,6 +84,7 @@
             // 
             // button5
             // 
+            button5.Cursor = Cursors.Hand;
             button5.Location = new Point(126, 502);
             button5.Name = "button5";
             button5.Size = new Size(100, 45);
@@ -90,6 +95,7 @@
             // 
             // button6
             // 
+            button6.Cursor = Cursors.Hand;
             button6.Location = new Point(232, 502);
             button6.Name = "button6";
             button6.Size = new Size(100, 45);
@@ -100,6 +106,7 @@
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.Location = new Point(311, 576);
             button1.Name = "button1";
             button1.Size = new Size(122, 44);

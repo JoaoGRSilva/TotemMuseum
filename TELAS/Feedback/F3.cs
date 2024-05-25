@@ -16,10 +16,13 @@ public partial class F3 : Form
 
 
 
-    int gostouEspaco, naoGostouEspaco;
-    int gostouObra, naoGostouObra;
-    int quisAlgo, naoQuisAlgo;
-    int numeroQuestao = 1;
+    public static int gostouEspaco  { get; set; }
+    public static int naoGostouEspaco { get; set; }
+    public static int gostouObra { get; set; }
+    public static int naoGostouObra { get; set; }
+    public static int quisAlgo { get; set; }
+    public static int naoQuisAlgo { get; set; }
+    public static int numeroQuestao = 1;
 
 
 

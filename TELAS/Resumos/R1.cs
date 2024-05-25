@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp1.TELAS.Feedback;
 using WinFormsApp1.TELAS.Resumo;
+using WinFormsApp1.TELAS.Resumos;
 
 namespace WinFormsApp1.TELAS
 {
@@ -61,6 +62,12 @@ namespace WinFormsApp1.TELAS
             BtnFeedBack.FlatAppearance.MouseDownBackColor = Color.Transparent;
             BtnFeedBack.FlatAppearance.MouseOverBackColor = Color.Transparent;
             BtnFeedBack.BackColor = Color.Transparent;
+
+            BtnAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnAdm.FlatAppearance.BorderSize = 0;
+            BtnAdm.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BtnAdm.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            BtnAdm.BackColor = Color.Transparent;
 
             #endregion
         }
@@ -132,6 +139,13 @@ namespace WinFormsApp1.TELAS
             this.Hide();
             F1 formFeed = new F1();
             formFeed.Show();
+        }
+
+        private void BtnAdm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdmLogin adm = new AdmLogin();
+            adm.Show();
         }
     }
 

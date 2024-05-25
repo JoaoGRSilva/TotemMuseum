@@ -35,6 +35,7 @@
             // 
             // BtnNao
             // 
+            BtnNao.Cursor = Cursors.Hand;
             BtnNao.Location = new Point(290, 273);
             BtnNao.Name = "BtnNao";
             BtnNao.Size = new Size(117, 64);
@@ -44,6 +45,7 @@
             // 
             // BtnSim
             // 
+            BtnSim.Cursor = Cursors.Hand;
             BtnSim.Location = new Point(100, 273);
             BtnSim.Name = "BtnSim";
             BtnSim.Size = new Size(142, 64);

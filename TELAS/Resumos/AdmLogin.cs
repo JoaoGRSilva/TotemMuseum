@@ -7,24 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.TELAS.Admin;
 
-namespace WinFormsApp1.TELAS.Feedback
+namespace WinFormsApp1.TELAS.Resumos
 {
-    public partial class F5 : Form
+    public partial class AdmLogin : Form
     {
-
-
-        public List<string> F5List = new List<string>();
-
-
-        public F5()
+        public AdmLogin()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            textBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C64A0");
-            textBox1.ForeColor = Color.White; // Define a cor do texto como branco para melhor visualização
-            textBox1.BorderStyle = BorderStyle.None; // Remove a borda do TextBox
 
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.FlatAppearance.BorderSize = 0;
@@ -35,12 +27,9 @@ namespace WinFormsApp1.TELAS.Feedback
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string userinput = textBox1.Text;
-            F5List.Add(userinput);
-
-            this.Close();
-            Feed_6 feed_6 = new Feed_6();
-            feed_6.Show();
+            this.Hide();
+            Adm1 adm = new Adm1();
+            adm.Show();
         }
     }
 }

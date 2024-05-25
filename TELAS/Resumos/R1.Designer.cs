@@ -35,6 +35,7 @@
             BtnApollo = new Button();
             BtnNasa = new Button();
             BtnFeedBack = new Button();
+            BtnAdm = new Button();
             SuspendLayout();
             // 
             // BtnAstronautas
@@ -111,6 +112,15 @@
             BtnFeedBack.UseVisualStyleBackColor = true;
             BtnFeedBack.Click += BtnFeedBack_Click;
             // 
+            // BtnAdm
+            // 
+            BtnAdm.Location = new Point(429, 11);
+            BtnAdm.Name = "BtnAdm";
+            BtnAdm.Size = new Size(82, 72);
+            BtnAdm.TabIndex = 7;
+            BtnAdm.UseVisualStyleBackColor = true;
+            BtnAdm.Click += BtnAdm_Click;
+            // 
             // R1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -118,6 +128,7 @@
             BackgroundImage = Properties.Resources.R1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 721);
+            Controls.Add(BtnAdm);
             Controls.Add(BtnFeedBack);
             Controls.Add(BtnNasa);
             Controls.Add(BtnApollo);
@@ -140,5 +151,6 @@
         private Button BtnApollo;
         private Button BtnNasa;
         private Button BtnFeedBack;
+        private Button BtnAdm;
     }
 }
