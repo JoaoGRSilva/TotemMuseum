@@ -93,6 +93,7 @@
             button1.Size = new Size(50, 50);
             button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // button2
             // 
@@ -102,6 +103,7 @@
             button2.Size = new Size(50, 50);
             button2.TabIndex = 5;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
             // button3
             // 
@@ -111,6 +113,7 @@
             button3.Size = new Size(50, 50);
             button3.TabIndex = 6;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
             // 
             // button4
             // 
@@ -120,6 +123,7 @@
             button4.Size = new Size(50, 50);
             button4.TabIndex = 7;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click_1;
             // 
             // button5
             // 
@@ -129,6 +133,7 @@
             button5.Size = new Size(50, 50);
             button5.TabIndex = 8;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click_1;
             // 
             // BtnProx
             // 

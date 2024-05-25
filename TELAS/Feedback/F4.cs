@@ -21,7 +21,7 @@ namespace WinFormsApp1.TELAS.Feedback
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             sim.Add(1);
-
+            buttons = new Button[] { button1, button2, button3, button4, button5 };
             ConfigureButtons();
         }
 
@@ -58,6 +58,8 @@ namespace WinFormsApp1.TELAS.Feedback
         public static int atendeuExpectativa { get; private set; }
         public static int naorecomenda { get; private set; }
         public static int recomendaSim { get; private set; }
+        private int resposta1a5;
+        private Button[] buttons;
 
         private void checkExpectativa(object sender, EventArgs e)
         {
@@ -103,6 +105,7 @@ namespace WinFormsApp1.TELAS.Feedback
         {
             if (todasPerguntasRespondidas)
             {
+                AdicionarResposta(resposta1a5);
                 this.Hide();
                 F5 f5 = new F5();
                 f5.Show();
@@ -120,56 +123,59 @@ namespace WinFormsApp1.TELAS.Feedback
             f3.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AtualizarCorBotao((Button)sender, Color.DarkBlue);
-            AdicionarResposta(1);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AtualizarCorBotao((Button)sender, Color.DarkBlue);
-            AdicionarResposta(2);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AtualizarCorBotao((Button)sender, Color.DarkBlue);
-            AdicionarResposta(3);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AtualizarCorBotao((Button)sender, Color.DarkBlue);
-            AdicionarResposta(4);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AtualizarCorBotao((Button)sender, Color.DarkBlue);
-            AdicionarResposta(5);
-        }
-
-        private void AtualizarCorBotao(Button button, Color color)
-        {
-            DefinirCorBotoes(Color.White);
-            button.BackColor = color;
-        }
-
-        private void DefinirCorBotoes(Color color)
-        {
-            button1.BackColor = color;
-            button2.BackColor = color;
-            button3.BackColor = color;
-            button4.BackColor = color;
-            button5.BackColor = color;
-        }
-
         private void AdicionarResposta(int resposta)
         {
             respostas.Add(resposta);
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkBlue;
+            button2.BackColor = Color.White;
+            button3.BackColor = Color.White;
+            button4.BackColor = Color.White;
+            button5.BackColor = Color.White;
+            resposta1a5 = 1;
+        }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+            button2.BackColor = Color.DarkBlue;
+            button3.BackColor = Color.White;
+            button4.BackColor = Color.White;
+            button5.BackColor = Color.White;
+            resposta1a5 = 2;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+            button2.BackColor = Color.White;
+            button3.BackColor = Color.DarkBlue;
+            button4.BackColor = Color.White;
+            button5.BackColor = Color.White;
+            resposta1a5 = 3;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+            button2.BackColor = Color.White;
+            button3.BackColor = Color.White;
+            button4.BackColor = Color.DarkBlue;
+            button5.BackColor = Color.White;
+            resposta1a5 = 4;
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+            button2.BackColor = Color.White;
+            button3.BackColor = Color.White;
+            button4.BackColor = Color.White;
+            button5.BackColor = Color.DarkBlue;
+            resposta1a5 = 5;
+        }
     }
 }

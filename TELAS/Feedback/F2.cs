@@ -46,7 +46,17 @@ namespace WinFormsApp1.TELAS.Feedback
 
         private void ShowKeyboard(object sender, EventArgs e)
         {
+            // Calcular a posição Y para o teclado
+            int tecladoPosY = this.Top + this.Height / 2 + 50; // 50 é uma distância específica abaixo do centro
+
+            // Criar o formulário do teclado com a posição calculada
             Teclado teclado = new Teclado(textBox1);
+            teclado.StartPosition = FormStartPosition.Manual; // Definir a posição manualmente
+
+            // Calcular a posição X para o teclado (centralizado horizontalmente)
+            int tecladoPosX = this.Left + (this.Width - teclado.Width) / 2;
+            teclado.Location = new Point(tecladoPosX, tecladoPosY); // Definir a posição calculada
+
             teclado.Show();
         }
 

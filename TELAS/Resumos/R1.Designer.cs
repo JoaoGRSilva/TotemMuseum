@@ -104,6 +104,7 @@
             // 
             // BtnFeedBack
             // 
+            BtnFeedBack.Cursor = Cursors.Hand;
             BtnFeedBack.Location = new Point(342, 12);
             BtnFeedBack.Name = "BtnFeedBack";
             BtnFeedBack.Size = new Size(75, 62);
@@ -114,6 +115,7 @@
             // 
             // BtnAdm
             // 
+            BtnAdm.Cursor = Cursors.Hand;
             BtnAdm.Location = new Point(429, 11);
             BtnAdm.Name = "BtnAdm";
             BtnAdm.Size = new Size(82, 72);

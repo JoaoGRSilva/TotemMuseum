@@ -40,6 +40,8 @@
             lblMedia = new Label();
             lblRecomenda = new Label();
             lblNaoRecomenda = new Label();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // qtdResponde
@@ -187,12 +189,32 @@
             lblNaoRecomenda.TabIndex = 11;
             lblNaoRecomenda.Text = "label11";
             // 
+            // button1
+            // 
+            button1.Location = new Point(466, 554);
+            button1.Name = "button1";
+            button1.Size = new Size(69, 53);
+            button1.TabIndex = 12;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(470, 651);
+            button2.Name = "button2";
+            button2.Size = new Size(63, 69);
+            button2.TabIndex = 13;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Adm1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.admRelatorio1;
             ClientSize = new Size(534, 721);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(lblNaoRecomenda);
             Controls.Add(lblRecomenda);
             Controls.Add(lblMedia);
@@ -226,5 +248,7 @@
         private Label lblMedia;
         private Label lblRecomenda;
         private Label lblNaoRecomenda;
+        private Button button1;
+        private Button button2;
     }
 }

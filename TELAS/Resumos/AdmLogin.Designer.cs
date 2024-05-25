@@ -28,18 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnLogin = new Button();
+            txtUsername = new TextBox();
+            txtPassword = new MaskedTextBox();
+            BtnSair = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(385, 258);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 44);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.Location = new Point(385, 258);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(107, 44);
+            btnLogin.TabIndex = 0;
+            btnLogin.UseVisualStyleBackColor = true;
+            // 
+            // txtUsername
+            // 
+            txtUsername.Location = new Point(209, 139);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(174, 23);
+            txtUsername.TabIndex = 1;
+            txtUsername.Click += ShowKeyboard;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(209, 196);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(174, 23);
+            txtPassword.TabIndex = 2;
+            txtPassword.Click += ShowKeyboardPW;
+            // 
+            // BtnSair
+            // 
+            BtnSair.Location = new Point(442, 94);
+            BtnSair.Name = "BtnSair";
+            BtnSair.Size = new Size(61, 51);
+            BtnSair.TabIndex = 3;
+            BtnSair.UseVisualStyleBackColor = true;
             // 
             // AdmLogin
             // 
@@ -47,14 +73,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.admlogin;
             ClientSize = new Size(534, 721);
-            Controls.Add(button1);
+            Controls.Add(BtnSair);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Controls.Add(btnLogin);
             Name = "AdmLogin";
             Text = "AdmLogin";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnLogin;
+        private TextBox txtUsername;
+        private MaskedTextBox txtPassword;
+        private Button BtnSair;
     }
 }

@@ -17,7 +17,25 @@ namespace WinFormsApp1.TELAS.Admin
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            ConfigureButtons();
         }
+
+
+        private void ConfigureButtons()
+        {
+            ConfigureButton(button2);
+            ConfigureButton(button1);
+        }
+
+        private void ConfigureButton(Button button)
+        {
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button.BackColor = Color.Transparent;
+        }
+
 
         private void Adm1_Load(object sender, EventArgs e)
         {
@@ -68,7 +86,7 @@ namespace WinFormsApp1.TELAS.Admin
             if (respostas.Count > 0)
             {
                 double media = respostas.Average();
-                return (int)Math.Round(media); 
+                return (int)Math.Round(media);
             }
             else
             {
@@ -76,7 +94,19 @@ namespace WinFormsApp1.TELAS.Admin
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Admin2 admin2 = new Admin2();
+            admin2.Show();
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            R1 r1 = new R1();
+            r1.Show();
+        }
     }
 
 
