@@ -56,9 +56,8 @@
             lblf5.ForeColor = Color.MintCream;
             lblf5.Location = new Point(59, 348);
             lblf5.Name = "lblf5";
-            lblf5.Size = new Size(57, 19);
+            lblf5.Size = new Size(0, 19);
             lblf5.TabIndex = 1;
-            lblf5.Text = "label1";
             // 
             // button1
             // 
