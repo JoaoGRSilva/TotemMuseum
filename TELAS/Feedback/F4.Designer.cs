@@ -28,155 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F4));
-            BtnSim1 = new Button();
-            BtnNao1 = new Button();
-            BtnSim = new Button();
-            BtnNao = new Button();
+            BtnExpectSim = new Button();
+            BtnExpectNao = new Button();
+            BtnRecomendaNao = new Button();
+            BtnRecomendaSim = new Button();
             button1 = new Button();
-            btnUm = new Button();
-            BtnDois = new Button();
-            BtnTres = new Button();
-            BtnQuatro = new Button();
-            BtnCinco = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            BtnProx = new Button();
+            BtnVolta = new Button();
             SuspendLayout();
             // 
-            // BtnSim1
+            // BtnExpectSim
             // 
-            BtnSim1.Cursor = Cursors.Hand;
-            BtnSim1.Location = new Point(128, 234);
-            BtnSim1.Name = "BtnSim1";
-            BtnSim1.Size = new Size(100, 45);
-            BtnSim1.TabIndex = 0;
-            BtnSim1.Tag = "1";
-            BtnSim1.TextAlign = ContentAlignment.MiddleRight;
-            BtnSim1.UseVisualStyleBackColor = true;
-            BtnSim1.Click += checkExpect;
+            BtnExpectSim.Cursor = Cursors.Hand;
+            BtnExpectSim.Location = new Point(126, 233);
+            BtnExpectSim.Name = "BtnExpectSim";
+            BtnExpectSim.Size = new Size(107, 45);
+            BtnExpectSim.TabIndex = 0;
+            BtnExpectSim.Tag = "1";
+            BtnExpectSim.UseVisualStyleBackColor = true;
+            BtnExpectSim.Click += checkExpectativa;
             // 
-            // BtnNao1
+            // BtnExpectNao
             // 
-            BtnNao1.Cursor = Cursors.Hand;
-            BtnNao1.Location = new Point(230, 234);
-            BtnNao1.Name = "BtnNao1";
-            BtnNao1.Size = new Size(100, 45);
-            BtnNao1.TabIndex = 1;
-            BtnNao1.Tag = "2";
-            BtnNao1.UseVisualStyleBackColor = true;
-            BtnNao1.Click += checkExpect;
+            BtnExpectNao.Cursor = Cursors.Hand;
+            BtnExpectNao.Location = new Point(249, 233);
+            BtnExpectNao.Name = "BtnExpectNao";
+            BtnExpectNao.Size = new Size(107, 45);
+            BtnExpectNao.TabIndex = 1;
+            BtnExpectNao.Tag = "2";
+            BtnExpectNao.UseVisualStyleBackColor = true;
+            BtnExpectNao.Click += checkExpectativa;
             // 
-            // BtnSim
+            // BtnRecomendaNao
             // 
-            BtnSim.Cursor = Cursors.Hand;
-            BtnSim.Location = new Point(128, 504);
-            BtnSim.Name = "BtnSim";
-            BtnSim.Size = new Size(100, 45);
-            BtnSim.TabIndex = 2;
-            BtnSim.Tag = "3";
-            BtnSim.UseVisualStyleBackColor = true;
-            BtnSim.Click += checkRecomenda;
+            BtnRecomendaNao.Cursor = Cursors.Hand;
+            BtnRecomendaNao.Location = new Point(249, 505);
+            BtnRecomendaNao.Name = "BtnRecomendaNao";
+            BtnRecomendaNao.Size = new Size(107, 45);
+            BtnRecomendaNao.TabIndex = 3;
+            BtnRecomendaNao.Tag = "2";
+            BtnRecomendaNao.UseVisualStyleBackColor = true;
+            BtnRecomendaNao.Click += checkRecomendacao;
             // 
-            // BtnNao
+            // BtnRecomendaSim
             // 
-            BtnNao.Cursor = Cursors.Hand;
-            BtnNao.Location = new Point(230, 504);
-            BtnNao.Name = "BtnNao";
-            BtnNao.Size = new Size(100, 45);
-            BtnNao.TabIndex = 3;
-            BtnNao.Tag = "4";
-            BtnNao.UseVisualStyleBackColor = true;
+            BtnRecomendaSim.Cursor = Cursors.Hand;
+            BtnRecomendaSim.Location = new Point(126, 505);
+            BtnRecomendaSim.Name = "BtnRecomendaSim";
+            BtnRecomendaSim.Size = new Size(107, 45);
+            BtnRecomendaSim.TabIndex = 2;
+            BtnRecomendaSim.Tag = "1";
+            BtnRecomendaSim.UseVisualStyleBackColor = true;
+            BtnRecomendaSim.Click += checkRecomendacao;
             // 
             // button1
             // 
             button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(322, 568);
+            button1.Location = new Point(131, 351);
             button1.Name = "button1";
-            button1.Size = new Size(127, 42);
+            button1.Size = new Size(50, 50);
             button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
-            // btnUm
+            // button2
             // 
-            btnUm.Cursor = Cursors.Hand;
-            btnUm.Location = new Point(130, 352);
-            btnUm.Name = "btnUm";
-            btnUm.Size = new Size(50, 50);
-            btnUm.TabIndex = 5;
-            btnUm.UseVisualStyleBackColor = true;
-            btnUm.Click += btnUm_Click;
+            button2.Cursor = Cursors.Hand;
+            button2.Location = new Point(190, 351);
+            button2.Name = "button2";
+            button2.Size = new Size(50, 50);
+            button2.TabIndex = 5;
+            button2.UseVisualStyleBackColor = true;
             // 
-            // BtnDois
+            // button3
             // 
-            BtnDois.Cursor = Cursors.Hand;
-            BtnDois.Location = new Point(191, 352);
-            BtnDois.Name = "BtnDois";
-            BtnDois.Size = new Size(50, 50);
-            BtnDois.TabIndex = 6;
-            BtnDois.UseVisualStyleBackColor = true;
-            BtnDois.Click += BtnDois_Click;
+            button3.Cursor = Cursors.Hand;
+            button3.Location = new Point(249, 351);
+            button3.Name = "button3";
+            button3.Size = new Size(50, 50);
+            button3.TabIndex = 6;
+            button3.UseVisualStyleBackColor = true;
             // 
-            // BtnTres
+            // button4
             // 
-            BtnTres.Cursor = Cursors.Hand;
-            BtnTres.Location = new Point(251, 352);
-            BtnTres.Name = "BtnTres";
-            BtnTres.Size = new Size(50, 50);
-            BtnTres.TabIndex = 7;
-            BtnTres.UseVisualStyleBackColor = true;
-            BtnTres.Click += BtnTres_Click;
+            button4.Cursor = Cursors.Hand;
+            button4.Location = new Point(308, 351);
+            button4.Name = "button4";
+            button4.Size = new Size(50, 50);
+            button4.TabIndex = 7;
+            button4.UseVisualStyleBackColor = true;
             // 
-            // BtnQuatro
+            // button5
             // 
-            BtnQuatro.Cursor = Cursors.Hand;
-            BtnQuatro.Location = new Point(309, 352);
-            BtnQuatro.Name = "BtnQuatro";
-            BtnQuatro.Size = new Size(50, 50);
-            BtnQuatro.TabIndex = 8;
-            BtnQuatro.UseVisualStyleBackColor = true;
-            BtnQuatro.Click += BtnQuatro_Click;
+            button5.Cursor = Cursors.Hand;
+            button5.Location = new Point(367, 351);
+            button5.Name = "button5";
+            button5.Size = new Size(50, 50);
+            button5.TabIndex = 8;
+            button5.UseVisualStyleBackColor = true;
             // 
-            // BtnCinco
+            // BtnProx
             // 
-            BtnCinco.Cursor = Cursors.Hand;
-            BtnCinco.Location = new Point(367, 352);
-            BtnCinco.Name = "BtnCinco";
-            BtnCinco.Size = new Size(50, 50);
-            BtnCinco.TabIndex = 9;
-            BtnCinco.UseVisualStyleBackColor = true;
-            BtnCinco.Click += BtnCinco_Click;
+            BtnProx.Cursor = Cursors.Hand;
+            BtnProx.Location = new Point(310, 566);
+            BtnProx.Name = "BtnProx";
+            BtnProx.Size = new Size(125, 45);
+            BtnProx.TabIndex = 9;
+            BtnProx.Tag = "2";
+            BtnProx.UseVisualStyleBackColor = true;
+            BtnProx.Click += BtnProx_Click;
+            // 
+            // BtnVolta
+            // 
+            BtnVolta.Cursor = Cursors.Hand;
+            BtnVolta.Location = new Point(126, 566);
+            BtnVolta.Name = "BtnVolta";
+            BtnVolta.Size = new Size(125, 45);
+            BtnVolta.TabIndex = 10;
+            BtnVolta.Tag = "2";
+            BtnVolta.UseVisualStyleBackColor = true;
+            BtnVolta.Click += BtnVolta_Click;
             // 
             // F4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.F4;
             ClientSize = new Size(534, 721);
-            Controls.Add(BtnCinco);
-            Controls.Add(BtnQuatro);
-            Controls.Add(BtnTres);
-            Controls.Add(BtnDois);
-            Controls.Add(btnUm);
+            Controls.Add(BtnVolta);
+            Controls.Add(BtnProx);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(BtnNao);
-            Controls.Add(BtnSim);
-            Controls.Add(BtnNao1);
-            Controls.Add(BtnSim1);
+            Controls.Add(BtnRecomendaNao);
+            Controls.Add(BtnRecomendaSim);
+            Controls.Add(BtnExpectNao);
+            Controls.Add(BtnExpectSim);
             Name = "F4";
-            Text = "Museu Totem";
+            Text = "F4";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button BtnSim1;
-        private Button BtnNao1;
-        private Button BtnSim;
-        private Button BtnNao;
+        private Button BtnExpectSim;
+        private Button BtnExpectNao;
+        private Button BtnRecomendaNao;
+        private Button BtnRecomendaSim;
         private Button button1;
-        private Button btnUm;
-        private Button BtnDois;
-        private Button BtnTres;
-        private Button BtnQuatro;
-        private Button BtnCinco;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Button BtnProx;
+        private Button BtnVolta;
     }
 }

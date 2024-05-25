@@ -43,17 +43,18 @@ namespace WinFormsApp1.TELAS.Admin
             lblNaoAlgoMais.Text = naoQuisAlgo.ToString();
 
 
-            int atendeuExpect = F4.atendeuExpect;
+            int atendeuExpect = F4.atendeuExpectativa;
             lblExpct.Text = atendeuExpect.ToString();
 
-            int naoAtendeuExpect = F4.naoAtendeuExpect;
-            lblNaoExpct.Text = atendeuExpect.ToString();
+            int naoAtendeuExpect = F4.naoAtendeuExpectativa;
+            lblNaoExpct.Text = naoAtendeuExpect.ToString();
 
-            int recomendaMuseu = F4.recomenda;
+            int recomendaMuseu = F4.recomendaSim;
             lblRecomenda.Text = recomendaMuseu.ToString();
 
-            int naorecomendaMuseu = F4.naoRecomenda;
+            int naorecomendaMuseu = F4.naorecomenda;
             lblNaoRecomenda.Text = naorecomendaMuseu.ToString();
+
 
             int museuMedia = CalcularMedia();
             lblMedia.Text = museuMedia.ToString();
@@ -71,10 +72,10 @@ namespace WinFormsApp1.TELAS.Admin
             }
             else
             {
-                MessageBox.Show("Nenhuma resposta foi inserida ainda.", "Média");
                 return 0;
             }
         }
+
 
     }
 

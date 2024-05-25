@@ -16,17 +16,13 @@ public partial class F3 : Form
 
 
 
-    public static int gostouEspaco  { get; set; }
+    public static int gostouEspaco { get; set; }
     public static int naoGostouEspaco { get; set; }
     public static int gostouObra { get; set; }
     public static int naoGostouObra { get; set; }
     public static int quisAlgo { get; set; }
     public static int naoQuisAlgo { get; set; }
     public static int numeroQuestao = 1;
-
-
-
-
 
     public F3()
     {
@@ -36,51 +32,50 @@ public partial class F3 : Form
         listaDeInteiros.Add(3);
         listaDeInteiros.Add(5);
 
+        ConfigureButtons();
+    }
 
+    private void ConfigureButtons()
+    {
+        ConfigureButton(button1);
+        ConfigureButton(button6);
+        ConfigureButton(button5);
+        ConfigureButton(button4);
+        ConfigureButton(button3);
+        ConfigureButton(BtnNao);
+        ConfigureButton(BtnSim);
+    }
 
+    private void ConfigureButton(Button button)
+    {
+        button.FlatStyle = FlatStyle.Flat;
+        button.FlatAppearance.BorderSize = 0;
+        button.FlatAppearance.MouseDownBackColor = Color.Transparent;
+        button.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        button.BackColor = Color.Transparent;
+    }
 
-        BtnSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        BtnSim.FlatAppearance.BorderSize = 0;
-        BtnSim.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        BtnSim.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        BtnSim.BackColor = Color.Transparent;
+    private bool todasPerguntasRespondidas = false;
 
-        BtnNao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        BtnNao.FlatAppearance.BorderSize = 0;
-        BtnNao.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        BtnNao.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        BtnNao.BackColor = Color.Transparent;
+    private void checarRespostas()
+    {
+        todasPerguntasRespondidas = (gostouEspaco != 0 || naoGostouEspaco != 0) &&
+                                    (gostouObra != 0 || naoGostouObra != 0) &&
+                                    (quisAlgo != 0 || naoQuisAlgo != 0);
+    }
 
-        button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button3.FlatAppearance.BorderSize = 0;
-        button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        button3.BackColor = Color.Transparent;
-
-        button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button4.FlatAppearance.BorderSize = 0;
-        button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        button4.BackColor = Color.Transparent;
-
-        button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button5.FlatAppearance.BorderSize = 0;
-        button5.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        button5.BackColor = Color.Transparent;
-
-        button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button6.FlatAppearance.BorderSize = 0;
-        button6.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        button6.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        button6.BackColor = Color.Transparent;
-
-
-        button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        button1.FlatAppearance.BorderSize = 0;
-        button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-        button1.BackColor = Color.Transparent;
+    private void button1_Click(object sender, EventArgs e)
+    {
+        if (todasPerguntasRespondidas)
+        {
+            this.Hide();
+            F4 f4 = new F4();
+            f4.Show();
+        }
+        else
+        {
+            MessageBox.Show("Por favor, responda todas as perguntas antes de prosseguir.");
+        }
     }
 
     private void checarEspaco(object sender, EventArgs e)
@@ -97,6 +92,11 @@ public partial class F3 : Form
             gostouEspaco++;
         }
 
+        checarRespostas();
+
+        // Desabilitar apenas os botões relacionados à pergunta de espaço
+        BtnSim.Enabled = false;
+        BtnNao.Enabled = false;
     }
 
     private void checarObra(object sender, EventArgs e)
@@ -111,8 +111,13 @@ public partial class F3 : Form
         else
         {
             gostouObra++;
-
         }
+
+        checarRespostas();
+
+        // Desabilitar apenas os botões relacionados à pergunta sobre a obra
+        button3.Enabled = false;
+        button4.Enabled = false;
     }
 
     private void checarAlgo(object sender, EventArgs e)
@@ -129,17 +134,12 @@ public partial class F3 : Form
             quisAlgo++;
             F3C f3C = new F3C();
             f3C.Show();
-
         }
-    }
 
-    
+        checarRespostas();
 
-
-    private void button1_Click(object sender, EventArgs e)
-    {
-        this.Hide();
-        F4 f4 = new F4();
-        f4.Show();
+        // Desabilitar apenas os botões relacionados à pergunta sobre algo
+        button5.Enabled = false;
+        button6.Enabled = false;
     }
 }
