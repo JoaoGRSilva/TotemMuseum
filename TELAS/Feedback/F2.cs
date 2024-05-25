@@ -1,101 +1,75 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1.TELAS.Feedback
 {
-    public partial class F2 : Form, IKeyboardTarget
+    public partial class F2 : Form
     {
         public F2()
         {
             InitializeComponent();
-
-            Console.WriteLine("RT");
-
+            ConfigureButtons();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.KeyPreview = true; // Permite que o formulário capture os eventos de teclado antes dos controles
+            this.KeyDown += F2_KeyDown; // Associa o evento KeyDown do formulário à função F2_KeyDown
 
-            btnProx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnProx.FlatAppearance.BorderSize = 0;
-            btnProx.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnProx.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnProx.BackColor = Color.Transparent;
 
-            btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnVoltar.FlatAppearance.BorderSize = 0;
-            btnVoltar.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnVoltar.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnVoltar.BackColor = Color.Transparent;
+            textBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C649F");
+            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            textBox1.ForeColor = System.Drawing.Color.White;
 
-            textBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C64A0");
-            textBox1.ForeColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.None;
+            comboBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C649F");
+            comboBox1.ForeColor = System.Drawing.Color.White;
+            comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat; // Remover bordas
+            comboBox1.MaxDropDownItems = 10;
 
             for (int i = 0; i <= 100; i++)
             {
                 comboBox1.Items.Add(i);
             }
-            comboBox1.SelectedIndex = 0;
-
-            comboBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C64A0");
-            comboBox1.ForeColor = Color.White;
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList; // Remove a capacidade de edição
-            comboBox1.FlatStyle = FlatStyle.Flat; // Remove a borda 3D
-            comboBox1.DrawMode = DrawMode.OwnerDrawFixed; // Desenha manualmente o item selecionado
-            comboBox1.DrawItem += ComboBox_DrawItem;
-
-            // Adicionando evento MouseClick ao textBox1
-            textBox1.MouseClick += opemKeyboard;
         }
 
-        private void ComboBox_DrawItem(object sender, DrawItemEventArgs e)
+        private void ConfigureButtons()
         {
-            if (e.Index < 0) return;
-            System.Windows.Forms.ComboBox combo = (System.Windows.Forms.ComboBox)sender;
-
-            e.Graphics.FillRectangle(new SolidBrush(combo.BackColor), e.Bounds);
-            e.Graphics.DrawString(combo.Items[e.Index].ToString(), combo.Font, new SolidBrush(combo.ForeColor), new Point(e.Bounds.X, e.Bounds.Y));
-
-            e.DrawFocusRectangle();
+            ConfigureButton(button2);
+            ConfigureButton(button1);
         }
 
-        public void AddTextToTextBox(string text)
+        private void ConfigureButton(Button button)
         {
-            textBox1.Text += text;
-            Console.WriteLine("Texto adicionado: " + text); // Instrução de depuração
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderSize = 0;
+            button.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button.BackColor = Color.Transparent;
         }
 
-        public void RemoveLastCharacterFromTextBox()
+        private void ShowKeyboard(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length > 0)
+            Teclado teclado = new Teclado(textBox1);
+            teclado.Show();
+        }
+
+        private void F2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter) // Verifica se a tecla pressionada não é Enter
             {
-                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+                textBox1.Text += e.KeyCode.ToString(); // Adiciona o código da tecla pressionada ao TextBox
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             F3 f3 = new F3();
             f3.Show();
         }
 
-        private void opemKeyboard(object sender, MouseEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // Verifica se o teclado já está aberto para evitar a abertura múltipla
-            if (Application.OpenForms.OfType<Teclado>().Any())
-                return;
-
-            Teclado teclado = new Teclado(this);
-            teclado.Show();
-
-            // Adiciona o foco à caixa de texto após abrir o teclado virtual
-            textBox1.Focus();
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            F1 f1 = new F1();
+            f1.Show();
         }
     }
 }

@@ -13,9 +13,6 @@ namespace WinFormsApp1.TELAS.Feedback;
 public partial class F3 : Form
 {
     List<int> listaDeInteiros = new List<int>();
-
-
-
     public static int gostouEspaco { get; set; }
     public static int naoGostouEspaco { get; set; }
     public static int gostouObra { get; set; }

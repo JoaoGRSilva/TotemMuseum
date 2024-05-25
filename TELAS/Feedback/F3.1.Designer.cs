@@ -45,13 +45,12 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(128, 128, 255);
-            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(108, 272);
+            textBox1.Font = new Font("Lembra Test XBold", 15.7499981F, FontStyle.Bold);
+            textBox1.Location = new Point(112, 278);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(302, 35);
+            textBox1.Size = new Size(298, 33);
             textBox1.TabIndex = 1;
-            textBox1.MouseClick += opemKeyboard;
+            textBox1.Click += ShowKeyboard;
             // 
             // F3C
             // 

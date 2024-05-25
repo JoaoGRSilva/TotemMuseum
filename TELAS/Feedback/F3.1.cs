@@ -7,27 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1.TELAS.Feedback
 {
-
-    public partial class F3C : Form, IKeyboardTarget
+    public partial class F3C : Form
     {
         public List<string> sugestoes = new List<string>();
-
 
         public F3C()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            textBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C64A0");
-            textBox1.ForeColor = Color.White; // Define a cor do texto como branco para melhor visualização
-            textBox1.BorderStyle = BorderStyle.None; // Remove a borda do TextBox
+            textBox1.BackColor = System.Drawing.ColorTranslator.FromHtml("#8C649F");
+            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            textBox1.ForeColor = System.Drawing.Color.White;
 
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.FlatAppearance.BorderSize = 0;
@@ -35,35 +28,29 @@ namespace WinFormsApp1.TELAS.Feedback
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.BackColor = Color.Transparent;
 
+            this.KeyPreview = true; // Permite que o formulário capture os eventos de teclado antes dos controles
+            this.KeyDown += F3C_KeyDown; // Associa o evento KeyDown do formulário à função F3C_KeyDown
         }
 
-        public void AddTextToTextBox(string text)
+        private void F3C_KeyDown(object sender, KeyEventArgs e)
         {
-            textBox1.Text += text;
-        }
-
-        public void RemoveLastCharacterFromTextBox()
-        {
-            if (textBox1.Text.Length > 0)
+            if (e.KeyCode != Keys.Enter) // Verifica se a tecla pressionada não é Enter
             {
-                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+                textBox1.Text += e.KeyCode.ToString(); // Adiciona o código da tecla pressionada ao TextBox
             }
-        }
-
-        private void opemKeyboard(object sender, MouseEventArgs e)
-        {
-            Teclado teclado = new Teclado(this);
-            teclado.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string userInput = textBox1.Text;
             sugestoes.Add(userInput);
-
-
             this.Close();
         }
 
+        private void ShowKeyboard(object sender, EventArgs e)
+        {
+            Teclado teclado = new Teclado(textBox1);
+            teclado.Show();
+        }
     }
 }
