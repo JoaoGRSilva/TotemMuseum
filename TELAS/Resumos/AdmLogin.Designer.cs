@@ -66,6 +66,7 @@
             BtnSair.Size = new Size(61, 51);
             BtnSair.TabIndex = 3;
             BtnSair.UseVisualStyleBackColor = true;
+            BtnSair.Click += BtnSair_Click;
             // 
             // AdmLogin
             // 

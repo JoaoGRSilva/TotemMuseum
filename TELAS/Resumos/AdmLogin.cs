@@ -20,6 +20,12 @@ namespace WinFormsApp1.TELAS.Resumos
             btnLogin.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnLogin.BackColor = Color.Transparent;
 
+            BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            BtnSair.FlatAppearance.BorderSize = 0;
+            BtnSair.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BtnSair.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            BtnSair.BackColor = Color.Transparent;
+
             this.KeyPreview = true;
             this.KeyDown += AdmLogin_KeyDownLogin;
 
@@ -99,6 +105,11 @@ namespace WinFormsApp1.TELAS.Resumos
             }
         }
 
-
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            R1 r1 = new R1();
+            r1.Show();
+        }
     }
 }

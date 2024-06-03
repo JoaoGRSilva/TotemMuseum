@@ -12,16 +12,13 @@ namespace WinFormsApp1.TELAS.Feedback
 {
     public partial class F5 : Form
     {
-
-
         public static List<string> F5List = new List<string>();
-
+        private Teclado teclado; // Variável de instância para o teclado
 
         public F5()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
 
             this.KeyPreview = true; // Permite que o formulário capture os eventos de teclado antes dos controles
             this.KeyDown += F5_KeyDown; // Associa o evento KeyDown do formulário à função F3C_KeyDown
@@ -35,13 +32,17 @@ namespace WinFormsApp1.TELAS.Feedback
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.BackColor = Color.Transparent;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string userinput = textBox1.Text;
             F5List.Add(userinput);
-
+            if (teclado != null && !teclado.IsDisposed)
+            {
+                teclado.Close(); // Fecha o teclado se estiver aberto
+            }
             this.Close();
             Feed_6 feed_6 = new Feed_6();
             feed_6.Show();
@@ -60,8 +61,8 @@ namespace WinFormsApp1.TELAS.Feedback
             // Calcular a posição Y para o teclado
             int tecladoPosY = this.Top + this.Height / 2 + 50; // 50 é uma distância específica abaixo do centro
 
-            // Criar o formulário do teclado com a posição calculada
-            Teclado teclado = new Teclado(textBox1);
+            // Inicializar a variável de instância do teclado
+            teclado = new Teclado(textBox1);
             teclado.StartPosition = FormStartPosition.Manual; // Definir a posição manualmente
 
             // Calcular a posição X para o teclado (centralizado horizontalmente)

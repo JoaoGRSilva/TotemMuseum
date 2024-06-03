@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace WinFormsApp1.TELAS.Feedback
+﻿namespace WinFormsApp1.TELAS.Feedback
 {
     public partial class F3C : Form
     {
         public static List<string> respostas = new List<string>();
+        private Teclado teclado; // Variável de instância para o teclado
 
         public F3C()
         {
@@ -44,6 +35,10 @@ namespace WinFormsApp1.TELAS.Feedback
         {
             string userInput = textBox1.Text;
             respostas.Add(userInput);
+            if (teclado != null && !teclado.IsDisposed)
+            {
+                teclado.Close(); // Fecha o teclado se estiver aberto
+            }
             this.Close();
         }
 
@@ -52,8 +47,8 @@ namespace WinFormsApp1.TELAS.Feedback
             // Calcular a posição Y para o teclado
             int tecladoPosY = this.Top + this.Height / 2 + 50; // 50 é uma distância específica abaixo do centro
 
-            // Criar o formulário do teclado com a posição calculada
-            Teclado teclado = new Teclado(textBox1);
+            // Inicializar a variável de instância do teclado
+            teclado = new Teclado(textBox1);
             teclado.StartPosition = FormStartPosition.Manual; // Definir a posição manualmente
 
             // Calcular a posição X para o teclado (centralizado horizontalmente)

@@ -50,6 +50,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(306, 35);
             textBox1.TabIndex = 1;
+            textBox1.Click += ShowKeyboard;
             // 
             // F5
             // 
